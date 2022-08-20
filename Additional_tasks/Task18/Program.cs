@@ -12,7 +12,7 @@ else
 }
 }
 int i = 0;
-bool[] checklist = new bool[8];
+//bool[] checklist = new bool[8];
 bool count = true;
 while (i < 4)
 {
