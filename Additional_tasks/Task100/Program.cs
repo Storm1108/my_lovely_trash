@@ -45,25 +45,6 @@ for (int i = 2; i <= N; i++)    //перебор числел i от 2 до N
     }
 }
 
-string SimpleMod(double number)
-{
-    int k = 0;
-    string answer = number + " ---> 1";
-    while (k <= N / 2)
-    {
-        if (number % A[k] == 0)
-        {
-            number = number / A[k];
-            answer += " * " + A[k];
-        }
-        else
-        {
-            k++;
-        }
-    }
-    return answer;
-}
 for (double s = 2; s <= N; s++)
 {
-    System.Console.WriteLine(SimpleMod(s));
 }
