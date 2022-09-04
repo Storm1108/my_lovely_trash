@@ -1,18 +1,13 @@
 ﻿// 45. Показать числа Фибоначчи
-int[] fibbonachiFill(){
-    int[] fibCurrent = new int[200];
-    fibCurrent[0] = 1;
-    fibCurrent[1] = 1;
-    for (int count = 2; fibCurrent[count] > 0; count++)
+
+List<int> fibbonachi = new List<int>() { 1, 1 };
+void fillList(List<int> fibonachiList)
+{
+    for (int count = 1; fibonachiList[count] > 0; count++)
     {
-        {
-            fibCurrent[count] = fibCurrent[count-1] + fibCurrent[count-2];
-        }
+        fibonachiList.Add(fibonachiList[count] + fibonachiList[count - 1]);
     }
-    return fibCurrent;
+    fibonachiList.RemoveAt(fibonachiList.Count - 1);
 }
-void arrayPrint(int[] array){
-    System.Console.Write($"Массив: ( {string.Join(", ", array)})");
-}
-arrayPrint(fibbonachiFill());
-List<int> fibbonachi = new List<int>() {1, 1};
+fillList(fibbonachi);
+System.Console.WriteLine($"Список: ({string.Join(", ", fibbonachi)})");
