@@ -2,11 +2,11 @@
 
 int m = 10;
 int n = 10;
-int[,] arr = new int [m, n];
+int[,] array = new int[m, n];
 System.Console.Write("Введите требуемое для поиска число: ");
 int a = Convert.ToInt32(Console.ReadLine());
 
-void Fill2(int[,] arr)
+void Fill(int[,] arr)
 {
     for (int i = 0; i < arr.GetLength(0); i++)
     {
@@ -18,17 +18,25 @@ void Fill2(int[,] arr)
         System.Console.WriteLine();
     }
 }
-Fill2(arr);
+Fill(array);
 System.Console.WriteLine();
-void Fill(int[,] arr)
+void DisplayElement(int[,] arr)
 {
+    bool checkExistance = false;
     for (int i = 0; i < arr.GetLength(0); i++)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
             if (arr[i, j] == a)
-             System.Console.Write($"({i}, {j}) ");
+            {
+                System.Console.Write($"({i}, {j}) ");
+                checkExistance = true;
+            }
         }
     }
+    if (!checkExistance)
+    {
+        System.Console.WriteLine("Такого числа нет в массиве");
+    }
 }
-Fill(arr);
+DisplayElement(array);
