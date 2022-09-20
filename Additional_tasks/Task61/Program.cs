@@ -54,7 +54,7 @@ void Multiply(int[,] a, int[,] b, int[,] result)
 }
 int ai = 2;         //Число строк 1 матрицы 
 int aj = 3;         //Число столбцов 1 матрицы
-int bi = 3;         //Число строк 2 матрицы
+int bi = 4;         //Число строк 2 матрицы     
 int bj = 3;         //Число столбцов 2 матрицы
 int[,] a = new int[ai,aj];
 int[,] b = new int[bi,bj];
